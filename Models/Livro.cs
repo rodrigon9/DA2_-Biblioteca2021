@@ -7,20 +7,37 @@ namespace DA2__aplicação.Models
 {
     public class Livro
     {
-        private string m_nome;
-        private string m_autor;
-        private string m_editora;
-        private int m_ano;
+        private int _identificacao;
+        private string _titulo;
+        private string _autor;
+        private string _editora;
+        private int _totalpaginas;
+        private string _capa;
+        private bool _emprestado;
+        private int _emprestadopor;
 
-        public string Nome
+        public int Identificacao
         {
             get
             {
-                return m_nome;
+                return _identificacao;
             }
             set
             {
-                m_nome = value;
+                _identificacao = value;
+            }
+        }
+
+        public string Titulo
+        {
+            get
+            {
+                return _titulo;
+            }
+
+            set
+            {
+                _titulo = value;
             }
         }
 
@@ -28,12 +45,11 @@ namespace DA2__aplicação.Models
         {
             get
             {
-                return m_autor;
+                return _autor;
             }
-
             set
             {
-                m_autor = value;
+                _autor = value;
             }
         }
 
@@ -41,32 +57,75 @@ namespace DA2__aplicação.Models
         {
             get
             {
-                return m_editora;
+                return _editora;
             }
             set
             {
-                m_editora = value;
+                _editora = value;
             }
         }
 
-        public int Ano
+        public int TotalPaginas
         {
             get
             {
-                return m_ano;
+                return _totalpaginas;
+            }
+
+            set
+            {
+                _totalpaginas = value;
+            }
+        }
+
+        public string Capa
+        {
+            get
+            {
+                return _capa;
             }
             set
             {
-                m_ano = value;
+                _capa = value;
+            }    
+        }
+
+        public bool Emprestado
+        {
+            get
+            {
+                return _emprestado;
+            }
+            set
+            {
+                _emprestado = value;
             }
         }
 
-        public Livro(string m_nome, string m_Autor, string m_editora, int m_ano)
+        public int EmprestadoPor
         {
-            m_nome = Nome;
-            m_autor = Autor;
-            m_editora = Editora;
-            m_ano = Ano;
+            get
+            {
+                return _emprestadopor;
+            }
+
+            set
+            {
+                _emprestadopor = value;
+            }
+        }
+        public Livro(int _identificacao, string _titulo, string _autor, string _editora, int _totalpaginas, string _capa, bool _emprestado, int _emprestadopor) 
+        {
+           _identificacao = Identificacao;
+            _titulo = Titulo;
+            _autor = Autor;
+            _editora = Editora;
+            _totalpaginas = TotalPaginas;
+            _capa = Capa;
+            _emprestado = Emprestado;
+            _emprestadopor = EmprestadoPor;
+
         }
 
     }
+}
